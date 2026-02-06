@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAK BIG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/stye.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">BIG SHOP</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Collections</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="product-search">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search products..."
+    >
+</div>
+
+                <button class="nav-icon" id="cartBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="nav-icon mobile-menu-toggle" id="mobileMenuToggle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">New Collection 2026</div>
+            <h1 class="hero-title">
+                <span class="hero-title-line">WELLCOM TO</span>
+                <span class="hero-title-line">BIG SHOP</span>
+            </h1>
+            <p class="hero-subtitle">Curated pieces that transcend trends</p>
+            <button class="btn btn-primary" onclick="scrollToSection('shop')" style="display: flex;"><a href="./Login.html">SHOP NOW</a></button>
+        </div>
+        <div class="hero-image-container">
+        <img
+            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=2400&q=80"
+            alt="Luxury Fashion"
+            class="hero-img"
+        >
+        <div class="hero-overlay"></div>
+    </div>
+    </section>
+
+    <!-- Categories -->
+<section class="categories">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Shop by Category</h2>
+        </div>
+
+        <div class="category-grid">
+
+            <!-- Women -->
+            <div class="category-card" data-category="women">
+                <div class="category-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b"
+                        alt="Women Fashion"
+                        loading="lazy"
+                    >
+                </div>
+                <div class="category-content">
+                    <h3>Women</h3>
+                    <p>Sophisticated essentials</p>
+                </div>
+            </div>
+
+            <!-- Men -->
+            <div class="category-card" data-category="men">
+                <div class="category-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59"
+                        alt="Men Fashion"
+                        loading="lazy"
+                    >
+                </div>
+                <div class="category-content">
+                    <h3>Men</h3>
+                    <p>Modern classics</p>
+                </div>
+            </div>
+
+            <!-- Accessories -->
+            <div class="category-card" data-category="accessories">
+                <div class="category-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3"
+                        alt="Accessories"
+                        loading="lazy"
+                    >
+                </div>
+                <div class="category-content">
+                    <h3>Accessories</h3>
+                    <p>Finishing touches</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Featured Products -->
+    <section class="products" id="shop">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Collection</h2>
+                <div class="product-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="women">Women</button>
+                    <button class="filter-btn" data-filter="men">Men</button>
+                    <button class="filter-btn" data-filter="accessories">Accessories</button>
+                </div>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+    <div class="container">
+        <div class="about-grid">
+
+            <!-- Text -->
+            <div class="about-content">
+                <h2 class="section-title">Crafted with Purpose</h2>
+                <p class="about-text">
+                    BIG SHOP represents a commitment to timeless design and sustainable craftsmanship.
+                    Each piece in our collection is thoughtfully selected to offer enduring style
+                    and exceptional quality.
+                </p>
+                <p class="about-text">
+                    We believe in creating fashion that transcends seasons, investing in pieces
+                    that become part of your story rather than fleeting trends.
+                </p>
+
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Curated Pieces</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Global Artisans</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Sustainable</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="about-visual">
+                <div class="about-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c"
+                        alt="NOIR craftsmanship"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Join Our Circle</h2>
+                <p class="newsletter-text">Receive exclusive access to new collections and special offers</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">BIG SHOP</h3>
+                    <p class="footer-text">Timeless fashion for the modern individual</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="#shop">New Arrivals</a></li>
+                        <li><a href="#shop">Women</a></li>
+                        <li><a href="#shop">Men</a></li>
+                        <li><a href="#shop">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">About</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#about">Sustainability</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contact">Locations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Follow</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NOIR. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="cart-empty">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-full">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <script src="/Js/java.js"></script>
+</body>
+</html>
